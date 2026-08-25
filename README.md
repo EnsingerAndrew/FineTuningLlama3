@@ -52,7 +52,10 @@ User requests a plot of the most recently created profile using **!** as a hard 
 
 <img width="1011" height="611" alt="frontier" src="https://github.com/user-attachments/assets/df869df0-e0c4-4fba-bba9-ff4b56a8615c" />
 
-
+```
+!plot frontier area
+```
+<img width="1011" height="611" alt="structure" src="https://github.com/user-attachments/assets/6359db69-b3d5-48d3-aa23-13cdabafc82a" />
 
 
 
@@ -78,17 +81,25 @@ Adapted from the example code from Unsloth which can be found here: https://unsl
 
 ## Training Set Generation Process
 
-A script was used to generate a list of portfolio combinations that include either a list of stocks or a list of qualifations and a optional risk measure indication. 
+A script was used to generate a list of portfolio combinations that include either a list of stocks or a list of qualifications and a optional risk measure indication. 
 
+Example: 
 ```
-example portfolio 
+{
+	stock_list: ["ICE", "RF", "ISRG", "AVB", "NTRS", "AEP", "COST", "ITW", "ROST"],
+	sectors: null,
+	dividend: null,
+	PE: null,
+	risk_measure: "dispersion"
+}
 ```
 
+These types of portfolio combinations where inputted into 3 LLMs  (Gemma, Llama, Phi), which outputted hypothetical input queries given an input query such as:
+```
+"Please make a natural sounding query from a user asking for an optimal portfolio allocation strategy to an ai system. \nThey would like to invest exclusively in the following tickers: ['ICE', 'RF', 'ISRG', 'AVB', 'NTRS', 'AEP', 'COST', 'ITW', 'ROST']. The elements in this list must be included but the list can take any form, such as a numbered list, comma separated values, etc.  \nThey would like the portfolio to limit dispersion. Make sure that dispersion and downside are differentiated. So if it sounds like they want to limit downside, do not make it also sound like they want to limit dispersion. And vice versa. \nThis information does not need to be in any particular order or have any set number of sentences."
+```
 
-
-These types of portfolio combinations where inputted into 3 LLMs  (list them), which outputted hypothetical input queries. 
-
-The structured target outputs were created using a simple program. 
+The structured target outputs were created using a simple program that didn't require an LLM because no variance in structure was desired. 
 
 These pairs were then used to train Llama 3.2 to take a user's query and output a structured description of the desired portfolio. 
 
