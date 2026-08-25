@@ -6,7 +6,7 @@ Fine Tuning Llama 3 for generating structured outputs to be used by Riskfolio li
 
 **Disclaimer:** This project is for testing the functionality of fine tuning Llama 3 to utilize tools and should not be relied upon to make investment decisions. 
 
-First type of interaction: 
+**First type of interaction:**
 
 User gives a list of specific stocks to be optimized along with an optimal indication as to what type of risk measure they desire to be used (Dispersion or Downside). 
 ```
@@ -25,7 +25,7 @@ Here is the optimal portfolio distribution:
 	AAPL 	4%
 ```
 
-Second type of interaction: 
+**Second type of interaction:**
 
 User gives a list of qualifications related to the stock's Sector, dividend rate, and PE ratio. 
 ```
@@ -48,7 +48,7 @@ Here is the optimal portfolio distribution:
 	NI   	7%
 ```
 
-Third type of interaction:
+**Third type of interaction:**
 
 User requests a plot of the most recently created profile using **!** as a hard command indicator. 
 
