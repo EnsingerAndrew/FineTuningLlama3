@@ -10,14 +10,24 @@ First type of interaction:
 
 User gives a list of specific stocks to be optimized along with an optimal indication as to what type of risk measure they desire to be used (Dispersion or Downside). 
 ```
-Example interaction
+Please make for me an optimized stock portfolio using the following tickers: AAPL, NVDA, MSFT, ALLE, ALGN, AMG, AET, AES. I would like the portfolio to be optimized to reduce dispersion.
 ```
-Model responds with a structured understanding of the problem followed by the calculated optimal portfolio. 
+Generated response: 
 ```
-Example interaction
+Sure, I'll generate an optimized stock portfolio for you.
+The portfolio will consist of the following stock tickers: AAPL, NVDA, MSFT, ALLE, ALGN, AMG, AET, AES
+Portfolio will be optimized using a dispersion-based risk measure.
+**Disclaimer:** AI-generated information is provided for educational purposes only and should not be considered financial advice.
+Applying Riskfolio Library...
+Here is the optimal portfolio distribution:
+	NVDA 	58%
+	AMG  	37%
+	AAPL 	4%
 ```
-User gives a list of qualifications related to the stock's Sector, dividend rate, and PE ratio. 
 
+Second type of interaction: 
+
+User gives a list of qualifications related to the stock's Sector, dividend rate, and PE ratio. 
 ```
 Please find stocks in the utilites, technology, and healthcare sectors, to make an optimal portfolio to minimize potential downsides. I would also like these stocks to have a diviend rate higher than 3% and a PE ratio less than 40. 
 ```
@@ -37,6 +47,8 @@ Here is the optimal portfolio distribution:
 	CNP  	12%
 	NI   	7%
 ```
+
+Third type of interaction:
 
 User requests a plot of the most recently created profile using **!** as a hard command indicator. 
 
