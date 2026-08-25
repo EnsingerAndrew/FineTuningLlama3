@@ -46,6 +46,14 @@ User requests a plot of the most recently created profile using **!** as a hard 
 
 <img width="1011" height="611" alt="pieChart" src="https://github.com/user-attachments/assets/29ebd5e4-c653-41fa-a2a0-7a0df588b880" />
 
+```
+!plot frontier
+```
+
+<img width="1011" height="611" alt="frontier" src="https://github.com/user-attachments/assets/df869df0-e0c4-4fba-bba9-ff4b56a8615c" />
+
+
+
 
 
 
