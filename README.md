@@ -104,6 +104,14 @@ Example:
 	PE: null,
 	risk_measure: "dispersion"
 }
+
+{
+	stock_list: null,
+	sectors: ["Consumer Discretionary", "Utilities", "Health Care", "Consumer Staples"],
+	dividend: 6.0,
+	PE: 24,
+	risk_measure: "downside"
+}
 ```
 
 These types of portfolio combinations where inputted into 3 LLMs  (Gemma, Llama, Phi), which outputted hypothetical input queries given an input query such as:
@@ -112,8 +120,6 @@ These types of portfolio combinations where inputted into 3 LLMs  (Gemma, Llama,
 ```
 
 The structured target outputs were created using a simple program that didn't require an LLM because no variance in structure was desired. 
-
-These pairs were then used to train Llama 3.2 to take a user's query and output a structured description of the desired portfolio. 
 
 ## LoRA Hyper Parameters
 
