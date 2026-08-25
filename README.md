@@ -6,21 +6,46 @@ Fine Tuning Llama 3 for generating structured outputs to be used by Riskfolio li
 
 **Disclaimer:** This project is for testing the functionality of fine tuning Llama 3 to utilize tools and should not be relied upon to make investment decisions. 
 
+First type of interaction: 
+
 User gives a list of specific stocks to be optimized along with an optimal indication as to what type of risk measure they desire to be used (Dispersion or Downside). 
 ```
 Example interaction
 ```
-User gives a list of qualificates related to the stock's Sector, dividend rate, and PE ratio. 
-
+Model responds with a structured understanding of the problem followed by the calculated optimal portfolio. 
 ```
 Example interaction
 ```
-
-User requests a plot of the most recently created profile. 
+User gives a list of qualifications related to the stock's Sector, dividend rate, and PE ratio. 
 
 ```
-Example interaction
+Please find stocks in the utilites, technology, and healthcare sectors, to make an optimal portfolio to minimize potential downsides. I would also like these stocks to have a diviend rate higher than 3% and a PE ratio less than 40. 
 ```
+Generated response: 
+```
+Absolutely, I can generate the portfolio you're looking for.
+The portfolio will contain stocks with the following qualities:
+	Belonging to the following sectors: Utilities, Technology, Healthcare
+	Dividend rate above 3.0%
+	PE ratio below 40
+Portfolio will be optimized using a downside-based risk measure.
+**Disclaimer:** AI-generated information is provided for educational purposes only and should not be considered financial advice.
+Applying Riskfolio Library...
+Here is the optimal portfolio distribution:
+	ETR  	59%
+	FE   	21%
+	CNP  	12%
+	NI   	7%
+```
+
+User requests a plot of the most recently created profile using **!** as a hard command indicator. 
+
+```
+!plot allocation
+```
+
+<img width="1011" height="611" alt="pieChart" src="https://github.com/user-attachments/assets/29ebd5e4-c653-41fa-a2a0-7a0df588b880" />
+
 
 
 
