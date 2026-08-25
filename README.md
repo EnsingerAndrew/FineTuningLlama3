@@ -77,7 +77,7 @@ Downloaded from https://www.kaggle.com/datasets/franoisgeorgesjulien/s-and-p-500
 **llama_FT.ipynb** - Jupyter notebook for fine tuning llama 3.2 on the training examples. 
 Adapted from the example code from Unsloth which can be found here: https://unsloth.ai/docs/get-started/fine-tuning-llms-guide/tutorial-how-to-finetune-llama-3-and-use-in-ollama
 
-**llama_riskfolio_inference.ipynb** - Jupyter notebook to query the fine-tuned model with a prompt and receiving the tool based answer with the optimal portfolio. 
+**llama_riskfolio_inference.ipynb** - Jupyter notebook to query the fine-tuned model with a prompt, and receiving the tool-based answer with the optimal portfolio. 
 
 ## Training Set Generation Process
 
