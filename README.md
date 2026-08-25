@@ -27,17 +27,19 @@ Example interaction
 
 ## Folders 
 
-**yf-downloads** - stock data used during optimal portfolio creation
+**yf-downloads** - Historical stock data downloaded using the yfinance library. Currently includes stocks in the SP500 which had historical stock data for at least 5 years. 
+In order for a symbol to be used by the tool, it must be present in this folder. 
 
 ## Files 
-**training_set.json** - pairs of inputs and outputs for llm to be used in training script
+**training_set.json** - Pairs of text inputs and outputs for fine tuning an LLM. The input is a user asking for an optimized portfolio using either a given set of stocks or a set of qualifications for what stocks should be used. The output is a structured explanation of the problem to solve using the Riskfolio library. 
 
-**financials.csv** - contains SP500 stock financial information. 
+**fundamentals.csv** - Contains SP500 stock fundamental data. Used by the system to filter by Dividend rate, PE ratio, and Sector.  
+Downloaded from https://www.kaggle.com/datasets/franoisgeorgesjulien/s-and-p-500-companies-with-financial-information 
 
-**llama_FT.ipynb** - python notebook for fine tuning llama 3.2 on training examples. 
+**llama_FT.ipynb** - Jupyter notebook for fine tuning llama 3.2 on the training examples. 
 Adapted from the example code from Unsloth which can be found here: https://unsloth.ai/docs/get-started/fine-tuning-llms-guide/tutorial-how-to-finetune-llama-3-and-use-in-ollama
 
-**llama_riskfolio_inference.ipynb** - querying the model with a prompt and receiving the tool based answer with the optimal portfolio. 
+**llama_riskfolio_inference.ipynb** - Jupyter notebook to query the fine-tuned model with a prompt and receiving the tool based answer with the optimal portfolio. 
 
 ## Training Set Generation Process
 
