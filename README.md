@@ -74,11 +74,11 @@ User requests a plot of the most recently created profile using **!** as a hard 
 
 
 ## Folders 
-
-**yf-downloads** - Historical stock data downloaded using the yfinance library. Currently includes stocks in the SP500 which had historical stock data for at least 5 years. 
+These folders are not present on this page due to memory constraints but they have been uploaded to Kaggle and can be downloaded into your working directory. 
+**yf-downloads** - Historical stock data downloaded using the yfinance library. Currently includes stocks in the SP500 which had historical stock data for at least 5 years. Can be downloaded from: https://www.kaggle.com/datasets/bandrewensinger/historicaldata  
 In order for a symbol to be used by the tool, it must be present in this folder. 
 
-**riskfolioAdapter** - this contains the LoRA Adapter to be applied to the LLM during inference. This folder is not included on this page but can be downloaded from:  https://www.kaggle.com/models/bandrewensinger/riskfolioft/. 
+**riskfolioAdapter** - this contains the LoRA Adapter to be applied to the LLM during inference. Can be downloaded from:  https://www.kaggle.com/models/bandrewensinger/riskfolioft/. 
 
 ## Files 
 **training_set.json** - Pairs of text inputs and outputs for fine tuning an LLM. The input is a user asking for an optimized portfolio using either a given set of stocks or a set of qualifications for what stocks should be used. The output is a structured explanation of the problem to solve using the Riskfolio library. 
