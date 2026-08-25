@@ -121,5 +121,8 @@ These types of portfolio combinations where inputted into 3 LLMs  (Gemma, Llama,
 
 The structured target outputs were created using a simple program that didn't require an LLM because no variance in structure was desired. 
 
-## LoRA Hyper Parameters
+## Future Work 
+* Adding more stock historical data and fundamentals for system access
+* Fine tuning on more fundamental data types
+* Fine tuning on more precise risk measure requests
 
